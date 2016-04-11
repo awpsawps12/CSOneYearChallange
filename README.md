@@ -1,9 +1,9 @@
-欢迎来到 FrontSeat
+计算机科学一年挑战
 ==================
 
 ![](./resources/logo.png)
 
-FrontSeat 是一个口号，是一个挑战，是一种精神，将来也会是一个以技术为核心的社区。在这里，我们会学习计算机科学基础；在这里，我们会发现需求开发产品；在这里，科技与艺术将结合为一体；在这里，我们将从前所未有的角度出发，通过近似亲身感受的体验，和我们一同探索不一样的技术世界。
+> FrontSeat 是一个口号，是一个挑战，是一种精神，将来也会是一个以技术为核心的社区。在这里，我们会学习计算机科学基础；在这里，我们会发现需求开发产品；在这里，科技与艺术将结合为一体；在这里，我们将从前所未有的角度出发，通过近似亲身感受的体验，和我们一同探索不一样的技术世界。
 
 我们是李忻阳和谢伟超，两个非科班出身的全职前端工程师。我们对技术有着浓厚的兴趣。但因为计算机科学基础知识的欠缺所以在职业道路上总感觉学习新的技术时并不那么的顺畅。所以我们决定完成下面的挑战。在未来的一年内我们将完成等同于美国计算机大学本科学生需要在四年内完成的全部课程。这些课程包括计算机科学入门课程，数学，程序设计，算法，编程范例，软件测试，软件架构，理论，软件工程，计算机架构，操作系统，计算机网络，数据库，云计算，密码学，编译器设计，用户体验设计，计算机图形，机器学习，自然语言处理，大数据，数据挖掘等。
 
@@ -17,20 +17,22 @@ FrontSeat 是一个口号，是一个挑战，是一种精神，将来也会是�
 
 以下为课程目录：
 
-### Introduction to Computer Science
+---
+
+### 计算机科学入门课程
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-5#!)| 9 weeks | 15 hours/week
 [From Nand to Tetris (Part 1) ](https://www.coursera.org/learn/build-a-computer) | 6 weeks | 5-10 hours/week
 
-### Math (Mathematical Thinking)
+### 数学 (Mathematical Thinking)
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Effective Thinking Through Mathematics](https://www.edx.org/course/effective-thinking-through-mathematics-utaustinx-ut-9-01x) | 9 weeks | 5 hours/week
 
-### Program Design
+### 程序设计
 
 Courses | Duration | Effort
 :-- | :--: | :--:
@@ -38,171 +40,172 @@ Courses | Duration | Effort
 [How to Code: Systematic Program Design - Part 2](https://www.edx.org/course/how-code-systematic-program-design-part-ubcx-spd2x)| 5 weeks | 8-12 hours/week
 [How to Code: Systematic Program Design - Part 3](https://www.edx.org/course/how-code-systematic-program-design-part-ubcx-spd3x)| 5 weeks | 8-12 hours/week
 
-### Math (Discrete Math)
+### 数学 (Discrete Math)
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Mathematics for Computer Science](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/index.htm)| 12 weeks | 5 hours/week
 
-### Algorithms
+### 算法
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Algorithms, Part I](https://www.coursera.org/course/algs4partI)| 6 weeks | 6-12 hours/week
 [Algorithms, Part II](https://www.coursera.org/course/algs4partII)| 6 weeks |  6-12 hours/week
 
-### Programming Paradigms
+### 编程范例
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun)| 7 weeks | 5-7 hours/week
 [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java) | 6 weeks | 4-6 hours/week
 
-### Software Testing
+### 软件测试
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Software Testing](https://www.udacity.com/course/software-testing--cs258)| 4 weeks | 6 hours/week
 [Software Debugging](https://www.udacity.com/course/software-debugging--cs259)| 8 weeks | 6 hours/week
 
-### Math (Calculus)
+### 数学 (Calculus)
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Calculus One](https://www.coursera.org/learn/calculus1)| 16 weeks | 8-10 hours/week
 [Calculus Two: Sequences and Series](https://www.coursera.org/learn/advanced-calculus)| 7 weeks | 9-10 hours/week
 
-### Software Architecture
+### 软件构架
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Software Architecture & Design](https://www.udacity.com/course/software-architecture-design--ud821)| 8 weeks | 6 hours/week
 
-### Theory
+### 理论
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Automata](https://www.coursera.org/course/automata)| 6 weeks | 8-10 hours/week
 
-### Software Engineering
+### 软件工程
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Software Processes and Agile Practices](https://www.coursera.org/learn/software-processes-and-agile-practices)| 4 weeks | 6-8 hours/week
 
-### Math (Probability)
+### 数学 (Probability)
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Introduction to Probability - The Science of Uncertainty](https://www.edx.org/course/introduction-probability-science-mitx-6-041x-0)| 16 weeks | 12 hours/week
 
-### Computer Architecture
+### 计算机系统结构
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Computer Architecture](https://www.coursera.org/course/comparch)| - | 5-8 hours/week
 
-### Operating Systems
+### 操作系统
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Operating Systems and System Programming](https://www.youtube.com/view_play_list?p=-XXv-cvA_iBDyz-ba4yDskqMDY6A1w_c)| 10 weeks | 2-3 hours/week
 
-### Computer Networks
+### 计算机网络
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Computer Networks](https://www.coursera.org/course/comnetworks)| - | 4–12 hours/week
 
-### Databases
+### 数据库
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Databases](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)| 12 weeks | 8-12 hours/week
 
-### Cloud Computing
+### 云计算
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Introduction to Cloud Computing](https://www.edx.org/course/introduction-cloud-computing-ieeex-cloudintro-x-0)| 4 weeks | 1 hour/week
 
-### Math (Linear Algebra)
+### 数学 (Linear Algebra)
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Coding the Matrix: Linear Algebra through Computer Science Applications](https://www.coursera.org/course/matrix)| 10 weeks | 7-10 hours/week
 
-### Cryptography
+### 密码学
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Cryptography I](https://www.coursera.org/course/crypto)| 6 weeks | 5-7 hours/week
 [Cryptography II](https://www.coursera.org/course/crypto2)| 6 weeks | 6-8 hours/week
 
-### Security
+### 网络安全
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Introduction to Cyber Security](https://www.futurelearn.com/courses/introduction-to-cyber-security) | 8 weeks | 3 hours/week
 
-### Compilers
+### 编译器
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Compilers](https://www.coursera.org/course/compilers)| 9 weeks | 6-8 hours/week
 
-### Parallel Computing
+### 并行计算
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Heterogeneous Parallel Programming](https://www.coursera.org/course/hetero)| 11 weeks | 8-10 hours/week
 
-### UX Design
+### 用户体验设计
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [UX Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)| 6 weeks | 6 hours/week
 
-### Computer Graphics
+### 计算机图像学
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Computer Graphics](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x)| 6 weeks | 12 hours/week
 
-### Artificial Intelligence
+### 人工智能
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Artificial Intelligence](https://www.edx.org/course/artificial-intelligence-uc-berkeleyx-cs188-1x#!)| 12 weeks | 15 hours/week
 
-### Machine Learning
+### 机器学习
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Machine Learning](https://www.coursera.org/learn/machine-learning)| 11 weeks | 4-6 hours/week
 
-### Natural Language Processing
+### 自然语言处理
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Natural Language Processing](https://www.coursera.org/course/nlangp)| 10 weeks | 8-10 hours/week
 
-### Big Data
+### 大数据
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Introduction to Big Data](https://www.coursera.org/learn/intro-to-big-data)| 3 weeks | 5-6 hours/week
 
-### Data Mining
+### 数据挖掘
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [Pattern Discovery in Data Mining](https://www.coursera.org/course/patterndiscovery) | 4 weeks | 4-6 hours/week
 
-### Internet of Things
+### 物联网
 
 Courses | Duration | Effort
 :-- | :--: | :--:
 [The Internet of Things](https://www.futurelearn.com/courses/internet-of-things)| 4 weeks | 2 hours/week
 
-声明：课程大纲来源于 GitHub 开源项目 open-source-society/computer-science ，感谢他们提供如此全面的资源总结。
+
+声明：课程大纲来源于 GitHub 开源项目 [open-source-society/computer-science](https://github.com/open-source-society/computer-science)，感谢他们提供如此全面的资源总结。
