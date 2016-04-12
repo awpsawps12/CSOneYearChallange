@@ -5,60 +5,42 @@ real-world analytical problems.
 
 *Resources*
 
--  [[https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-6#!][Course
-   Link]]
--  [[https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0][Textbook
-   Link]]
+-  [[https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-6#!][Course Link]]
+-  [[https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-0][Textbook Link]]
 
-** Week 1: Introduction & Core Elements of Programs
+* Week 1: Introduction & Core Elements of Programs
 
 Computational mode of thinking means that everything can be viewed as a
 math problem involving numbers and formulas.
 
 Two types knowledges,
 
--  Declarative(i.e., the desired result is specified), statement of
-   facts ("the square root of =x= is a number =y=, that =y * y = x=,
-   usually not what we need for computational thinking)
--  Imperative(i.e., sequence of operation to perform), method on how you
-   reached to that fact. (Such as
-   [[https://en.wikipedia.org/wiki/Methods_of_computing_square_roots][methods
-   of computing square root]])
+-  Declarative(i.e., the desired result is specified), statement of facts ("the square root of =x= is a number =y=, that =y * y = x=, usually not what we need for computational thinking)
+-  Imperative(i.e., sequence of operation to perform), method on how you reached to that fact. (Such as [[https://en.wikipedia.org/wiki/Methods_of_computing_square_roots][methods of computing square root]])
 
 Computer does *two* things and two things only,
-
 -  Stores data
 -  Computes data.
 
 Computer has two types,
-
--  Fixed, is designed to do very specific things(e.g. calculator).
--  Stored, stores and manipulate instructions(e.g. modern computers) and
-   then interpreter execute instructions in order.
+-  Fixed, is designed to do very specific things(e.g. calculator)
+-  Stored, stores and manipulate instructions(e.g. modern computers) and then interpreter execute instructions in order
 -  Instructions are built from predefined primitive instructions
-
    -  Arithmetic and logic
    -  Simple tests
    -  Moving data
-
 -  Interpreter executes instructions
-
    -  Use test to change flow of control
 
 /Basic Machine Architecture/
 
 Program counter points the next executable instruction inside memory.
 
-TODO: Change Turing Machine and Turing Completeness section
+# TODO: Change Turing Machine and Turing Completeness section
 
-Turing ([[https://en.wikipedia.org/wiki/Alan_Turing][/Alan Turing/]],
-1912-1954) completeness states that anything computable can be computed
-using computer. (Any thing that can be programmed in one language can be
-programmed in any other language)
+Turing ([[https://en.wikipedia.org/wiki/Alan_Turing][Alan Turing]], 1912-1954) completeness states that anything computable can be computed using computer. (Any thing that can be programmed in one language can be programmed in any other language)
 
-Programming languages define syntax and semantics needed to translate
-computational ideas into mechanical steps. Interactive with computer
-always roughly the same.
+Programming languages define syntax and semantics needed to translate computational ideas into mechanical steps. Interactive with computer always roughly the same.
 
 Languages difference are,
 
@@ -122,7 +104,7 @@ The simplest branching statement is a conditional,
 -  A block of code
 -  An optional block of code
 
-** Week 2: Simple Algorithm & Functions
+* Week 2: Simple Algorithm & Functions
 
 Loop characteristics (=for= and =while= statements),
 
@@ -190,11 +172,7 @@ should be used.
 If there is NO integer =p= such that =x*(2**p)= is a whole number, then
 internal representation is always an approximation.
 
-[[https://en.wikipedia.org/wiki/Bisection_method][*Bisection
-Search*]](Searching continuous function
-values)/[[https://en.wikipedia.org/wiki/Binary_search_algorithm][*Binary
-Search*]](Searching a finite sorted array), reducing the range in each
-stage dramatically which means algorithm is important.
+[[https://en.wikipedia.org/wiki/Bisection_method][*Bisection Search*]](Searching continuous function values)/[[https://en.wikipedia.org/wiki/Binary_search_algorithm][*Binary Search*]](Searching a finite sorted array), reducing the range in each stage dramatically which means algorithm is important.
 
 /The target number is 22/
 
@@ -269,30 +247,29 @@ The *Stack Frame* for function above,
 *Test function* is important which saves tremendous amount of time while
 developing.
 
-[[https://www.python.org/dev/peps/pep-0257/#specification][/docstring/]]
-provides specifications of functions and can be accessed using the
+[[https://www.python.org/dev/peps/pep-0257/#specification][/docstring/]] provides specifications of functions and can be accessed using the
 build-in =help=.
 
 #+BEGIN_SRC python
-    # Google Style docstring
-    def function_with_docstring(arg):
-        """function functionality description
+  # Google Style docstring
+  def function_with_docstring(arg):
+      """function functionality description
 
-        Args:
-          arg (str): string argument sample input
+      Args:
+        arg (str): string argument sample input
 
-        Returns:
-          bool: True, False otherwise
-        """
-        return 1990
+      Returns:
+        bool: True, False otherwise
+      """
+      return 1990
 
-    def findRoot(x, power, epsilon):
-      """Assumes x and epsilon int or float,
-        power an int, epsilon > 0 & power >= 1
-        Returns float y such that y**power is within epsilon of x.
-        If such a float does not exist,
-        it returns None"""
-      # Your code goes here
+  def findRoot(x, power, epsilon):
+    """Assumes x and epsilon int or float,
+      power an int, epsilon > 0 & power >= 1
+      Returns float y such that y**power is within epsilon of x.
+      If such a float does not exist,
+      it returns None"""
+    # Your code goes here
 #+END_SRC
 
 A *function specification* defines a contract between the function
@@ -326,10 +303,9 @@ copy-paste.
     print pi # -> 3.141592653
 #+END_EXAMPLE
 
-** Week 3: Recursion & Objects
+* Week 3: Recursion & Objects
 
-Looping constructs (=while= or =for=) leads to
-[[https://en.wikipedia.org/wiki/Iterative_method][iterative algorithm]].
+Looping constructs (=while= or =for=) leads to [[https://en.wikipedia.org/wiki/Iterative_method][iterative algorithm]].
 
 *Recursion Algorithm* is important. It reduces a problem into a simple
 version of the same problem which can be solved directly. It made up of
@@ -339,26 +315,25 @@ two parts,
 -  at least one recursive (inductive) case
 
 #+BEGIN_SRC python
-    # multiplication
-    def recurMul(a, b):
-      if b == 1:
-        return a
-      else:
-        return a + recurMul(a, b - 1)
+  # multiplication
+  def recurMul(a, b):
+    if b == 1:
+      return a
+    else:
+      return a + recurMul(a, b - 1)
 
-    # find factorial num using recursion
-    def factR(n):
-      """Assumes that n is an int > 0
-         Return n!"""
-        if n == 1:
-          return n
-        else:
-          return n * factR(n - 1)
+  # find factorial num using recursion
+  def factR(n):
+    """Assumes that n is an int > 0
+       Return n!"""
+      if n == 1:
+        return n
+      else:
+        return n * factR(n - 1)
 #+END_SRC
 
 #+BEGIN_QUOTE
-  [[https://en.wikipedia.org/wiki/Mathematical_induction][Mathematical
-  induction]]
+  [[https://en.wikipedia.org/wiki/Mathematical_induction][Mathematical induction]]
 
   To prove a statement indexed on integers is true for all values of =n=
   - Prove it is true when =n= is smallest value - Then prove that if it
@@ -366,47 +341,37 @@ two parts,
   true for =n + 1=
 #+END_QUOTE
 
-[[https://en.wikipedia.org/wiki/Divide_and_conquer_algorithms][*Divide
-and Conquer Algorithm*]] is based on /multi-branched recursion/ which
+[[https://en.wikipedia.org/wiki/Divide_and_conquer_algorithms][*Divide and Conquer Algorithm*]] is based on /multi-branched recursion/ which
 solves a hard problem by breaking it into a set of sub-problems such
 that sub-problems are easier to solve than the original and the solution
 of the sub-problems can be combined to solve the original problem.
 
-[[https://en.wikipedia.org/wiki/Global_variable][Global variable]] is a
-variable with global
-[[https://en.wikipedia.org/wiki/Scope_(computer_science)][scope]](Inside
-the program where the name binding is valid) which is dangerous and
-destroying code locality, therefore, use with caution. In Python,
-=global= keyword is to change/create global variable in a local context
-(See more
-[[http://stackoverflow.com/questions/4693120/use-of-global-keyword-in-python][here]])
+[[https://en.wikipedia.org/wiki/Global_variable][Global variable]] is a variable with global [[https://en.wikipedia.org/wiki/Scope_(computer_science)][scope]](Inside the program where the name binding is valid) which is dangerous and destroying code locality, therefore, use with caution. In Python, =global= keyword is to change/create global variable in a local context
+(See more [[http://stackoverflow.com/questions/4693120/use-of-global-keyword-in-python][here]])
 
 *Compound Data Types* (Non-scalar Object), Tuples, Lists and
 Dictionaries.
 
--  Tuples, ordered sequence of elements (any object with no aliasing
-   issue)
--  Immutable (tuple, int, float, str)
--  Concatenation =+=
--  Indexing
--  Slicing
--  Singleton =(3,) # -> (3)= instead of =(3) # -> 3=
--  List (Array in other languages), ordered sequence of values
--  Mutable
--  Singleton =[3]=
--  Cloning =new_array = origin_array[:]=
--  List comprehension =[x**2 for x in range(1,7)]= gives you
-   =[1,4,9,16,25,36]= (Not readable)
--  Deletion =del array[index]=
--  Dictionary, generalization of unordered lists(key can be any
-   immutable value)
--  Mutable
--  Deletion =del dictionary[key]=
+- Tuples, ordered sequence of elements (any object with no aliasing
+  issue)
+  - Immutable (tuple, int, float, str)
+  - Concatenation =+=
+  - Indexing
+  - Slicing
+  - Singleton =(3,) # -> (3)= instead of =(3) # -> 3=
+- List (Array in other languages), ordered sequence of values
+  - Mutable
+  - Singleton =[3]=
+  - Cloning =new_array = origin_array[:]=
+  - List comprehension =[x**2 for x in range(1,7)]= gives you
+    =[1,4,9,16,25,36]= (Not readable)
+  - Deletion =del array[index]=
+- Dictionary, generalization of unordered lists(key can be any
+  immutable value)
+  - Mutable
+  - Deletion =del dictionary[key]=
 
-In Python, argument(s) is
-[[https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference][passing
-by assignment]].
-
+In Python, argument(s) is [[https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference][passing by assignment]].
 -  Reference/Nutable Type
 -  Reference to an object, =Person= object
 -  Data types are mutable, =list= or =dictionary=
@@ -423,7 +388,6 @@ In Python, *Function* is first class objects(higher order programming),
    statement/argument to a function)
 
 * Week 4: Debugging & Assertions and Exceptions
-
 ** Testing
 
 Testing methods are ways of trying code on examples to determine if
@@ -490,9 +454,7 @@ Highly Automated Testing environment using,
   Debugging is an art.
 #+END_QUOTE
 
-The
-[[http://thenextweb.com/shareables/2013/09/18/the-very-first-computer-bug/][first
-bug]] was found at Harvard on the *Mark II*.
+The [[http://thenextweb.com/shareables/2013/09/18/the-very-first-computer-bug/][first bug]] was found at Harvard on the *Mark II*.
 
 Information of bugs,
 
@@ -513,8 +475,7 @@ Categories of bugs,
 -  Covert\\
 -  Highly dangerous
 
-[[https://en.wikipedia.org/wiki/Defensive_programming][/Defensive
-Programming/]], programming mistakes lead to bugs that are both overt
+[[https://en.wikipedia.org/wiki/Defensive_programming][/Defensive Programming/]], programming mistakes lead to bugs that are both overt
 and persistent.
 
 *Debugging Skills* (Debugging as Search)
@@ -545,8 +506,7 @@ being systematic in conducting search.
 
 ** Assertions and Exceptions
 
-/Exception/ (Build-in Exception Details
-[[https://docs.python.org/2/library/exceptions.html][here]]) is an
+/Exception/ (Build-in Exception Details [[https://docs.python.org/2/library/exceptions.html][here]]) is an
 unexpected condition. What to do when there is an exception,
 
 -  Fail silent (BAD)
@@ -559,12 +519,12 @@ Python code can provide handler for exception, but handler usually is
 only meant to deal with one particular type of exception.
 
 #+BEGIN_SRC python
-    try:
-      f = open('filename.txt')
-    except IOerror e:
-      # Exception propagation
-      # Raise the exception to caller (See explanation below)
-      raise Exception("Cannot open file")
+  try:
+    f = open('filename.txt')
+  except IOerror e:
+    # Exception propagation
+    # Raise the exception to caller (See explanation below)
+    raise Exception("Cannot open file")
 #+END_SRC
 
 Common error types are,
@@ -579,23 +539,23 @@ Common error types are,
 User-defined Exceptions
 
 #+BEGIN_SRC python
-    class NetworkError(RuntimeError):
-      def __init__(self, arg):
-        self.args = arg
+  class NetworkError(RuntimeError):
+    def __init__(self, arg):
+      self.args = arg
 
-    try:
-      raise NetworkError("Bad hostname")
-    except NetworkError, e:
-      print e.args
+  try:
+    raise NetworkError("Bad hostname")
+  except NetworkError, e:
+    print e.args
 #+END_SRC
 
 Catch all exceptions,
 
 #+BEGIN_SRC python
-    try:
-      # Your code here
-    except:
-      # Catch *all* exceptions
+  try:
+    # Your code here
+  except:
+    # Catch *all* exceptions
 #+END_SRC
 
 The extension to =try=,
@@ -604,47 +564,43 @@ The extension to =try=,
 -  =finally=, always get executed (useful for clean up)
 
 #+BEGIN_SRC python
-    def divide(x, y):
-      try:
-        result = x / y
-      except ZeroDivisionError e:
-        print str(e)
-      except TypeError e:
-        print str(e)
-      except ValueError, Argument:
-        print Argument
-      else:
-        # If there is NO exception
-        print result
-      finally:
-        # Always get executed
-        print "Finally Clause"
+  def divide(x, y):
+    try:
+      result = x / y
+    except ZeroDivisionError e:
+      print str(e)
+    except TypeError e:
+      print str(e)
+    except ValueError, Argument:
+      print Argument
+    else:
+      # If there is NO exception
+      print result
+    finally:
+      # Always get executed
+      print "Finally Clause"
 #+END_SRC
 
-In Python,
-[[https://docs.python.org/2/tutorial/errors.html#raising-exceptions][=raise=]]
-has two usage (See discussion
-[[http://stackoverflow.com/questions/13957829/how-to-use-raise-keyword-in-python][here]]),
+In Python, [[https://docs.python.org/2/tutorial/errors.html#raising-exceptions][=raise=]] has two usage (See discussion [[http://stackoverflow.com/questions/13957829/how-to-use-raise-keyword-in-python][here]]),
 
 -  Raising errors when the function unable to produce a result
-   consistent with specification,
-   =raise [Exception [, args [, traceback]]]=
+   consistent with specification, =raise [Exception [, args [, traceback]]]=
 -  Re-raise the exception in an exception handler, so that it can be
    handled further up the call stack
 
 #+BEGIN_SRC python
-    def function_name(arg):
-      if arg < 1:
-        #      Exception    Argument
-        #         |           |
-        raise "Invalid Arg", arg
+  def function_name(arg):
+    if arg < 1:
+      #      Exception    Argument
+      #         |           |
+      raise "Invalid Arg", arg
 
-    try:
-      function_name(0)
-    except "Invalid Arg", Argument
-      print Argument # -> 0
-    else:
-      print "Done"
+  try:
+    function_name(0)
+  except "Invalid Arg", Argument
+    print Argument # -> 0
+  else:
+    print "Done"
 #+END_SRC
 
 *Asssertions*, =assert Expression[, Arguments]=, can be used to ensure
@@ -695,35 +651,30 @@ depends on,
 -  Specifics code implementation (See method above)
 -  Input value (Measuring in term of input size)
 
-Use [[https://en.wikipedia.org/wiki/Random-access_machine][Random Access
-Machine]] (RAM) as computation model to measure basic steps,
+Use [[https://en.wikipedia.org/wiki/Random-access_machine][Random Access Machine]] (RAM) as computation model to measure basic steps,
 
 -  Steps are executed sequentially
 -  Step is an operation that takes constant time (assignment,
    comparison, arithmetic operation, accessing object in memory)
 
 Different input will result different output which affect measuring
-program complexity. The cases for measuring complexity are
-([[https://en.wikipedia.org/wiki/Best,_worst_and_average_case][Best,
-worst and average case]]),
+program complexity. The cases for measuring complexity are ([[https://en.wikipedia.org/wiki/Best,_worst_and_average_case][Best, worst and average case]]),
 
 -  Best case, minimum running time over all possible input of a give
    size
 -  Worst case(our focus, upper bound on running time), maximum running
    time over all possible input of given size
 -  Average/Expected case, average running time over all possible inputs
-   of give size
+   of give size (What we care most)
 
 The multiplicative constants are not relevant when comparing algorithms
 (=5n + 2= is basically as same as =n=), focus on the largest factor in
 the expression.
 
 * Week 6: Placeholder
-
 * Extra Python Related Things
 
-*File Handling* (Reading more about Python I/O
-[[https://docs.python.org/2/tutorial/inputoutput.html][here]])
+*File Handling* (Reading more about Python I/O [[https://docs.python.org/2/tutorial/inputoutput.html][here]])
 
 -  =w=, write only method
 -  =r=, read only method
@@ -795,12 +746,9 @@ instead)
 
 *Algorithmic Technique*
 
--  [[https://en.wikipedia.org/wiki/Trial_and_error][Trial and error]]
-   (Guess and check)
--  [[https://en.wikipedia.org/wiki/Brute-force_search][Brute-force
-   Search]] (Exhaustive search or generate and test)
+-  [[https://en.wikipedia.org/wiki/Trial_and_error][Trial and error]] (Guess and check)
+-  [[https://en.wikipedia.org/wiki/Brute-force_search][Brute-force Search]] (Exhaustive search or generate and test)
 
 * I DO NOT UNDERSTAND THIS
 
-[[https://en.wikipedia.org/wiki/Newton%27s_method][*Newton-Raphson*]],
-most commonly used approximation algorithm.
+[[https://en.wikipedia.org/wiki/Newton%27s_method][*Newton-Raphson*]], most commonly used approximation algorithm.
