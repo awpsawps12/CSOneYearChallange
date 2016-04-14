@@ -128,5 +128,104 @@
       print('Odd')
   print('Done with conditional')
   ```
-  
+
 Python 使用 `==` 判断符进行值之间的比较判断，一个 `=` 为赋值运算符。空格在 Python 中是非常重要的，因为 Python 用它来区分代码块。
+
+## Week 2: 简介与 Python 编程基础
+
+### Lecture 3: Python 的迭代循环以及算法基础
+
+今天我们学到的内容是 Python 的迭代循环以及算法基础。
+
+迭代循环 (Iteration Loop)，
+1. 始于一个判断条件，判断条件返回 `Ture` 或者 `False`
+2. 如果为 `Ture` ，则执行循环内部代码，然后再次进行判断，以此循环
+3. 知道判断条件为 `False` 时，则跳出循环体
+
+一个简单的例子，
+```python
+x = 4
+ans = 0
+itersLeft = x
+while (itersLeft != 0):
+  ans = ans + x
+  itersLeft = itersLeft - 1
+print(str(x) + '*' + str(x) + '=' + str(ans))
+```
+- 需要在循环体外面摄设置一个循环变量，该例子中分别为 `itersLeft`
+- 对循环变量进行条件判断已决定什么时候终止循环，该例子中为 `itersLeft != 0`
+- 在每次执行完循环体内的代码时，需要改变循环变量的数值，该例子中为 `itersLeft = itersLeft -1`，如果不改变，则每次判断的结果都相同，循环就不会终止
+
+Python 中有两种迭代循环方法，
+- While 循环 (While loops)
+- For 循环 (For loops)
+
+循环的特点，
+- 循环变量(设置初始值，根据判断条件进行判断，在循环体内改变循环变量)，或者我们可称之为状态变量 (state variable)
+
+我们来回忆一下，分支结构 (Branching Structures) 允许我们根据不同的条件执行不同的代码块，因此程序的执行时间是固定的 (contant time)，因为每个代码块被执行的次数至多为 1 次。
+
+而循环结构允许我们根据不同的条件重复执行相同的代码块,程序的执行时间是根据循环次数而决定的。
+
+计算机内部任何数值都会被转换成二进制数值来进行计算和存储
+
+十进制整数转换二进制正数，
+
+```python
+is num < 0:
+  isNeg = True
+  num = abs(num)
+else:
+  isNeg = False
+result = ''
+if num == 0:
+  result = '0'
+while num > 0:
+  result = str(num % 2) + result # <- get the binary digit
+  num /= 2 # <- shift to right
+if isNeg:
+  result = '-' + result
+```
+
+十进制小数转换成二进制小数
+
+```python
+# Refer conversion steps above
+p = 0
+while ((2**p)*num)%1 != 0: # (1) Convert fractional into whole num
+  p += 1
+print "p:", p
+num = int(num*(2**p))
+result = ''
+if num == 0:
+  result = '0'
+while num > 0: # (2) Convert decimal into binary
+  result = str(num%2) + result
+  num /= 2
+for i in range(p - len(result)): # (3) Division, shift left
+  result = '0' + result
+result = result[0:-p] + '.' + result[-p:]
+print str(num), 'Binary Representation', result
+```
+
+四种基础算法
+- 猜测检查法 (Guess and Check method)
+- 近似法 (Approximation Methods)
+- 二元搜索法 (Bisection Search)
+- 牛顿-拉弗森法（Newton-Raphson method）
+
+猜测检查法
+
+我们推测我们所要解决问题的结果，然后去检验它.
+
+- 该方法只适用于有限的可能性。
+- 猜测检查法的一个特例算法就是穷举法 (exhaustive enumeration)
+
+近似法
+- 需要一个近似范围，如果近似范围过于的小，则近似过程会非常长，如果近似范围过大，则结果误差会比较大。
+
+二元搜索法 (Bisection Search)
+<img src="./resources/binary_search.gif" width="400">
+- 与前两种方法相比，二分法能够有效的减少计算时间
+
+牛顿-拉弗森法
