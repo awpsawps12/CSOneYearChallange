@@ -214,22 +214,25 @@ print str(num), 'Binary Representation', result
 
 ### Lecture 4: 抽象以及在 Python 中使用函数进行抽象
 
-今天我们学到的内容是抽象以及在 Python 中使用函数进行抽象
+![](./resources/Day004.png)
 
-程序抽象 (Abstraction)，
-1. 使使用者不用关系底层的计算过程
-2. 可复用
-3. 可以有效的控制变量的作用域
+今天我们学到的内容是抽象（Abstraction）以及在 Python 中如何使用函数进行抽象
 
-函数就是最基本的一种代码抽象的方式
+程序抽象可以，
+1. 让使用者不用关心底层的实现过程
+2. 复用
+3. 有效的控制变量的作用域
 
-在 Python 中，定义一个函数要使用 `def` 语句，依次写出函数名、括号、括号中的参数和冒号 `:`，以及缩进块中编写函数体。
+函数其实就是最基本的一种代码抽象的方式。在 Python 中，定义一个函数要使用 `def` 语句，依次写出函数名、括号、括号中的参数和冒号 `:`，以及缩进块中编写函数体。
+
+我们其实经常说“传参”其实这个参数是有一个实参（Actual Parameter）和形参（Formal Parameter 也叫 Argument）的区别。形参是指在函数定义时设置的参数，实参则是真正传入的参数。
 
 ```python
+# 这里的参数为形参
 def function_name(formal_parameter0, formal_parameter1):
   return None
 
-# Actual parameter also known as argument
+# 这里传入的就是实参
 function_name(actual_parameter0, actual_parameter1)
 ```
 
@@ -238,24 +241,19 @@ function_name(actual_parameter0, actual_parameter1)
 2. 遇见关键字 `return` ,这种情况下会返回指定表达式的值
 
 当我们调用一个函数的时候，
-1. 将实参 (actual parameter(s)) 和 形参 (formal parameter(s)) 绑定在一起
-2. 将执行指针 (point of execution) 指向函数体
+1. 将实参 (Actual Parameter）和形参（Formal Parameter）绑定在一起
+2. 将执行指针 (Point of Execution) 指向函数体
 3. 执行函数体
 4. 函数体返回的值即为函数的调用值
 5. 将执行指针的指向改变回来
 
-程序执行环境 (environment)
-environment is a formalism for tracking the bindings of
-variables and values.
-
-a Python shell is an environment.
-It's often called the default or global environment.
+程序执行环境 (Environment)是一种用于查询变量与其所属的值绑定关系的方式。在 Python Shell 的环境中存在的所有变量均为全局变量也就是说他们处于一个全局环境中（Global Environment）。
 
 当我们调用一个函数时，
 2. 函数对象会创建出一个新的子环境，在这个环境中根据调用时传递的数值重新进行变量绑定
 3. 根据新的子环境中的变量绑定关系，执行函数体内的表达式
 
-每次函数调用的作用于被称作静态作用域 (static scope) 或词法作用域 (lexical scope)
+每次函数调用的作用域被称作静态作用域 (Static Scope) 或词法作用域 (Lexical Scope)
 
 ```python
 def square(x):
@@ -280,27 +278,24 @@ print(z)       #256
 
 函数的两种属性，
 - 可分性 (Decomposition)，我们可以讲问题分解成无数个模块，并且每个模块是可复用的
-- 抽象性 (Abstraction)，
- - 用户并不需要知道程序的具体细节，他们只需要知道怎么使用，函数能够让细节保持在内部并不暴漏出来，就想一个黑盒
+- 抽象性 (Abstraction)，用户并不需要知道程序的具体细节，他们只需要知道怎么使用，函数能够让细节保持在内部并不暴漏出来，就像一个黑盒
 
-模块化
-
-模块化是程序的可维护性以及复用性大大提高，并且避免了函数名和变量名冲突。
-
-一个模块是一个单独的 `*.py` 文件，其中包含了数个定义或封装好的函数，每一个模块都有自己独立的执行环境。
+模块化使程序的可维护性以及复用性大大提高，并且避免了函数名和变量名冲突。在 Python 中的模块是一个单独存在的 `*.py` 文件，其中包含了若干个定义或封装好的函数，每一个模块都拥有自己独立的执行环境。下面是一个 Python 模块的例子
 
 ```
 # XYMath.py
 pi = 3.141592653
 ```
 
-使用 `import` 来调用模块
+使用 `import` 来调用模块并创建一个命名空间（Namespace）再用点的方式（Dot Notation）来获取这个命名空间里的数据。
 
 ```
 # app.py
 import XYMath
 print XYMath.pi # -> 3.141592653
 ```
+
+使用 `*` 来引用全部的内容，有些类似于拷贝整个模块中的文件去引用文件的行首。
 
 ```
 # app0.py
