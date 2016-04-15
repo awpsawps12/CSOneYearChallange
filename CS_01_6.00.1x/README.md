@@ -219,6 +219,7 @@ print str(num), 'Binary Representation', result
 今天我们学到的内容是抽象（Abstraction）以及在 Python 中如何使用函数进行抽象
 
 程序抽象可以，
+
 1. 让使用者不用关心底层的实现过程
 2. 复用
 3. 有效的控制变量的作用域
@@ -241,6 +242,7 @@ function_name(actual_parameter0, actual_parameter1)
 2. 遇见关键字 `return` ,这种情况下会返回指定表达式的值
 
 当我们调用一个函数的时候，
+
 1. 将实参 (Actual Parameter）和形参（Formal Parameter）绑定在一起
 2. 将执行指针 (Point of Execution) 指向函数体
 3. 执行函数体
@@ -282,14 +284,14 @@ print(z)       #256
 
 模块化使程序的可维护性以及复用性大大提高，并且避免了函数名和变量名冲突。在 Python 中的模块是一个单独存在的 `*.py` 文件，其中包含了若干个定义或封装好的函数，每一个模块都拥有自己独立的执行环境。下面是一个 Python 模块的例子
 
-```
+```python
 # XYMath.py
 pi = 3.141592653
 ```
 
 使用 `import` 来调用模块并创建一个命名空间（Namespace）再用点的方式（Dot Notation）来获取这个命名空间里的数据。
 
-```
+```python
 # app.py
 import XYMath
 print XYMath.pi # -> 3.141592653
@@ -297,7 +299,7 @@ print XYMath.pi # -> 3.141592653
 
 使用 `*` 来引用全部的内容，有些类似于拷贝整个模块中的文件去引用文件的行首。
 
-```
+```python
 # app0.py
 from XYMath import *
 print pi # -> 3.141592653
