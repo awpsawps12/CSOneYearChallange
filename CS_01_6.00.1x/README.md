@@ -304,3 +304,38 @@ print XYMath.pi # -> 3.141592653
 from XYMath import *
 print pi # -> 3.141592653
 ```
+
+### Lecture 5: 递归
+
+![](./resources/Day005.png)
+
+今天我们学到的知识是递归（Recursion）和复合数据类型。
+
+循环让我们可以使用循环的算法（第三天的四种算法）。而递归则可以化难为简，将一个复杂的问题简化，直至简化到这个问题可以简单到直接获取他的答案。（不要害怕递归，其实它只是一种运算思路并不是什么高深莫测的东西）
+
+递归就是一个函数在函数体内调用自己的运算方式。下面是一个简单的乘法递归例子，
+
+```python
+def recursion_multiplication(a, b):
+  if b == 1:
+    return a
+  else:
+    return a + recursion_multiplication(a, b - 1)
+```
+
+任何一个递归函数都拥有下面的两个特性，
+
+- 至少拥有一个结束判断（Base Case）
+- 至少拥有一个递归判断（Recursion Case）
+
+当调用递归函数的时候，根据实参值得不同来进入不同判断，直到某一次的函数调用触发了结束判断时，函数的值就会一层层的返回到它的调用函数中，并在最后成为第一个调用函数的返回值。
+
+符合数据类型（Compound Data Type 在 Python 中也称之为 Non-scalar Script），是有基础数据类型组合而成。在 Python 中它们是 Tuples，Lists 还有 Dictionary。
+
+下面我们来简单的对比下这几个数据类型的区别，
+
+- Tuple，有序不可修改的元素组（元素可以为任意数据类型）
+- List，有序可以修改的元素组
+- Dictionary，无序可修改的并可用关键字引用的数据类型
+
+可修改的数据类型会存在别名错误（Aliasing Bug）这种错误就是不同的变量名引用了同样的数据源，修改数据源则会导致其他的这几个变量所引用的的数据全部发生了改变。
