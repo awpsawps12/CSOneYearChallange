@@ -305,6 +305,8 @@ from XYMath import *
 print pi # -> 3.141592653
 ```
 
+## Week 3: 递归与对象
+
 ### Lecture 5: 递归
 
 ![](./resources/Day005.png)
@@ -339,3 +341,58 @@ def recursion_multiplication(a, b):
 - Dictionary，无序可修改的并可用关键字引用的数据类型
 
 可修改的数据类型会存在别名错误（Aliasing Bug）这种错误就是不同的变量名引用了同样的数据源，修改数据源则会导致其他的这几个变量所引用的的数据全部发生了改变。
+
+### Lecture 6: 对象
+
+符合数据类型 (Compound Data Types)
+- 元祖 (Tuples)
+- 列表 (Lists)
+- 词典 (Dictionaries)
+
+元祖，由任意元素组成的有序列表。
+
+```python
+tuples_name = (element0, element2, ...)
+```
+
+元祖的属性与方法有，
+- 元祖一旦初始化后就**不能修改** (`int`，`float`，`str` 也同样不可修改)
+- 拼接 (Concatenation)
+- 使用索引 (Index) 调用内部元素
+- 截取 (Slicing)
+- 初始化单独元素的时候，需要加逗号以区分和数字的区别，`tulpe = (1,)`
+- 可使用 `For loop` 对元祖元素进行遍历
+
+列表，与元祖类似，由任意元素组成的有序列表，不同的是，使用中括号进行定义，
+
+```python
+list_name = [element0, element2, ...]
+```
+
+列表的属性与方法有，
+- 初始化单独元素的时候，不需加额外的逗号，`list = [1]`
+- 列表是可变的
+- 可使用 `For loop` 对列表元素进行遍历
+- 使用 `append()` 向列表末尾添加元素，与拼接创建出一个新列表不同，`append()` 修改了原列表
+- 克隆 (Clone) `new_list = origin_list[:]`
+
+
+函数是第一类对象 (First-class object)，第一类对象拥有以下特性，
+- 拥有类型 (types)
+- 可以成为数据结构中的元素
+- 可以在表达式中使用，比如赋值表达式或是作为函数参数
+
+高阶函数 (Higher Order Functions)
+- `map(element0, element1, ...)`函数接收两个或以上参数，`element0`是函数，map将传入的函数依次作用到序列的每个元素，并把结果作为新的list返回。
+
+```python
+L1 = [1, 28, 36]
+L2 = [2, 57, 9]
+map(min, L1, L2)      #[1, 28, 9]
+```
+
+词典，使用键-值（key-value）存储
+
+- 键初始化后是不可变的，对应的值是可变的
+- 键可以是复杂形式
+- 不能以数字索引访问其中的元素，以键进行索引
