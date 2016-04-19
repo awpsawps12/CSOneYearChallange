@@ -15,6 +15,8 @@
 
 如果你可以完成英文的各类课程，也欢迎加入我们的挑战！我们会尽可能的帮助你解决你所遇到的问题。下面是我们挑战中包含的课程，整个挑战需要大约 2653 个小时完成。
 
+现在挑战正在进行的课程是 [Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-5#!)，课程的记录可以在[这里](./CS_01_6.00.1x/README.md)找到。
+
 以下为课程目录：
 
 ---
