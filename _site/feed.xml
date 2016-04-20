@@ -5,9 +5,141 @@
     <description></description>
     <link>http://challenge.frontseat.io/</link>
     <atom:link href="http://challenge.frontseat.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Apr 2016 20:42:10 +0800</pubDate>
-    <lastBuildDate>Wed, 20 Apr 2016 20:42:10 +0800</lastBuildDate>
+    <pubDate>Wed, 20 Apr 2016 21:22:14 +0800</pubDate>
+    <lastBuildDate>Wed, 20 Apr 2016 21:22:14 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Day 008</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/Day008.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;异常 (Exceptions，Build-in Exception Details &lt;a href=&quot;https://docs.python.org/2/library/exceptions.html&quot;&gt;here&lt;/a&gt;) ，指程序运行中出现不可预期的情况。&lt;/p&gt;
+
+&lt;p&gt;什么时候会发生，例如&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用超过列表范围的索引值，会产生 &lt;code class=&quot;highlighter-rouge&quot;&gt;IndexError&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;类型转换，会产生 &lt;code class=&quot;highlighter-rouge&quot;&gt;TypeError&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;引用一个不存在的变量，会产生 &lt;code class=&quot;highlighter-rouge&quot;&gt;NameError&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;对不同类型的数据进行运算，在没有做强制类型转换的情况下，会产生 &lt;code class=&quot;highlighter-rouge&quot;&gt;TypeError&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对于异常处理的方法，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不理会 (非常不好)&lt;/li&gt;
+  &lt;li&gt;返回一个错误值，需要额外代码做检查&lt;/li&gt;
+  &lt;li&gt;停止程序执行，抛出单独异常的情况，在 Python 中我们称之为抛出异常(Raising an Exception)，&lt;code class=&quot;highlighter-rouge&quot;&gt;raise Exception(&quot;Error Information&quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在 Python 中处理异常，&lt;/p&gt;
+
+&lt;p&gt;Python 提供了处理异常的处理器 (Handler)，&lt;code class=&quot;highlighter-rouge&quot;&gt;try … expect …&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;异常处理器会对特定的异常类型进行处理，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;filename.txt&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;IOError&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;           
+  &lt;span class=&quot;c&quot;&gt;# e is the actual error object&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Exception propagation&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Raise the exception to caller (See explanation below)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Cannot open file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Python 中常见的异常，
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;SyntaxError&lt;/code&gt;，Python 不能解析程序中的语法
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;NameError&lt;/code&gt;，找不到该变量名
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;AttributeError&lt;/code&gt;，属性引用失败
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;TypeError&lt;/code&gt;，运算类型不对
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;ValueError&lt;/code&gt;，对错误的类型进行数据转换
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;IOError&lt;/code&gt;，系统故障(文件没有找到)&lt;/p&gt;
+
+&lt;p&gt;自定义一个异常处理，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NetworkError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;RuntimeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NetworkError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bad hostname&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NetworkError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;捕获所有异常，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Your code here&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Catch *all* exceptions&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;关于 &lt;code class=&quot;highlighter-rouge&quot;&gt;Try&lt;/code&gt; 的扩展，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; 语句，当没有异常发生时，则会执行 &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; 中的代码&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; 语句， 会在 &lt;code class=&quot;highlighter-rouge&quot;&gt;try&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;except&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt; 后执行，该语句一定会被执行，哪怕是遇到错误或是执行了 &lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;continue&lt;/code&gt; 或者 &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt; 语句&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一个简单的列子，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;divide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ZeroDivisionError&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ValueError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Argument&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# If there is NO exception&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Always get executed&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Finally Clause&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;断言 (Assertions)指的是程序进行到某个时间点，断定其必然是某种状态，具体来讲，也就是断定改时间点上，某变量一定是某值，或是具有必定的属性。&lt;/p&gt;
+
+&lt;p&gt;Python 使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;assert Expression[, Arguments]&lt;/code&gt; 来进行断言。当假设与程序实际运行结果不符，在使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;try-except&lt;/code&gt; 语句处理异常时会抛出 &lt;code class=&quot;highlighter-rouge&quot;&gt;AssertionError&lt;/code&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;avg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grades&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weights&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Raise AssertionException when list is empty&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grades&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;No grades data&#39;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Python list comprehension&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;new_grade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convertLetterGrade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elt&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grades&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dotProduct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_grade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weights&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_grade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用断言进行防御性编程 (Defensive programming），&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;断言可以很好的控制在未知条件下程序的响应，当产生不可预期的情况时，断言会阻断程序的运行。&lt;/li&gt;
+  &lt;li&gt;通常用于检测程序的输入，同时也可以在任何地方使用。&lt;/li&gt;
+  &lt;li&gt;能够更容易的定位出程序出错的地方。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使用断言可以有效的检测输入与输出的前提和后置条件，以避免错误的数值。&lt;/p&gt;
+
+&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;assert&lt;/code&gt;，
+- 检测参数的类型/数值
+- 检查数据结构中的不变量是否满足
+- 检查返回值是否满足约束条件
+- 检查程序&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://challenge.frontseat.io/2016/04/20/day-008.html</link>
+        <guid isPermaLink="true">http://challenge.frontseat.io/2016/04/20/day-008.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Day 007</title>
@@ -457,7 +589,7 @@
 - 低级语言 (Low-level Programming Language) vs. 高级语言 (High-level Programming Language)
 - 直译式语言 (Interpreted Language) vs. 编译式语言 (Compiled Language)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./resources/program_language_options.jpg&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/program_language_options.jpg&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;低级语言,
 - 低级编程语言的语法与语义和计算机的机器语言极其相似
