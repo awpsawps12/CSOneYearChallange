@@ -1,7 +1,6 @@
 script: bash ./deploy.sh
 before_install:
-  - sudo apt-get install ruby
-  - sudo gem install jekyll
+  - gem install jekyll
 env:
   global:
     - GH_REF: github.com/FrontSeat/CSOneYearChallange
