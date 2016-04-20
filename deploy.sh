@@ -8,7 +8,7 @@ git config --global user.name "Rebot"
 
 jekyll build
 
-cp ./_site/* ./public
+cp -r ./_site/* ./public
 
 cd ./public
 git init
