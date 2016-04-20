@@ -159,9 +159,10 @@ pre {
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left; }
+  float: left;
+  color: #E45252; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #B84343; }
 
 .site-nav {
   float: right;

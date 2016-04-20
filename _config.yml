@@ -16,4 +16,3 @@ github_username_1: awpsawps12
 # Build settings
 markdown: kramdown
 gems:
-  - jekyll-gist

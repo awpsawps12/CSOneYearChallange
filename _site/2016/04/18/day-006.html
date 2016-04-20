@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Day000：踏上征途吧！</title>
-  <meta name="description" content="_posts/2016-04-01-day-000.md">
+  <title>Day 006</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://challenge.frontseat.io/2016/04/20/day-000.html">
+  <link rel="canonical" href="http://challenge.frontseat.io/2016/04/18/day-006.html">
   <link rel="alternate" type="application/rss+xml" title="FrontSeat" href="http://challenge.frontseat.io/feed.xml">
 </head>
 
@@ -57,12 +57,66 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Day000：踏上征途吧！</h1>
-    <p class="post-meta"><time datetime="2016-04-20T11:10:07+08:00" itemprop="datePublished">Apr 20, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Day 006</h1>
+    <p class="post-meta"><time datetime="2016-04-18T00:00:00+08:00" itemprop="datePublished">Apr 18, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>_posts/2016-04-01-day-000.md</p>
+    <p><img src="/images/Day006.png" alt="" /></p>
+
+<p>符合数据类型 (Compound Data Types)
+- 元祖 (Tuples)
+- 列表 (Lists)
+- 词典 (Dictionaries)</p>
+
+<p>元祖是由任意元素组成的有序列表。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">tuples_name</span> <span class="o">=</span> <span class="p">(</span><span class="n">element0</span><span class="p">,</span> <span class="n">element2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>元祖的属性与方法有，
+- 元祖一旦初始化后就<strong>不能修改</strong> (就如同，<code class="highlighter-rouge">int</code>，<code class="highlighter-rouge">float</code>，<code class="highlighter-rouge">str</code> 也同样在初始化后不可修改)
+- 拼接 (Concatenation)
+- 使用索引 (Index) 调用内部元素
+- 截取 (Slicing)
+- 初始化单独元素的时候，需要加逗号以区分和数字的区别，<code class="highlighter-rouge">tulpe = (1,)</code>
+- 可使用 <code class="highlighter-rouge">For loop</code> 对元祖元素进行遍历</p>
+
+<p>列表，与元祖类似，由任意元素组成的有序列表，不同的是，使用中括号进行定义并且<strong>可以修改</strong>，</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">list_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">element0</span><span class="p">,</span> <span class="n">element2</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>列表的属性与方法有，
+- 初始化单独元素的时候，不需加额外的逗号，<code class="highlighter-rouge">list = [1]</code>
+- 列表是可变的
+- 可使用 <code class="highlighter-rouge">For loop</code> 对列表元素进行遍历
+- 使用 <code class="highlighter-rouge">append()</code> 向列表末尾添加元素，与拼接创建出一个新列表不同，<code class="highlighter-rouge">append()</code> 修改了原列表
+- 克隆 (Clone) <code class="highlighter-rouge">new_list = origin_list[:]</code></p>
+
+<p>函数是第一类对象 (First-class Object)，第一类对象拥有以下特性，
+- 拥有类型 (Types)
+- 可以成为数据结构中的元素
+- 可以在表达式中使用，比如赋值表达式或是作为函数参数</p>
+
+<p>高阶函数 (Higher-order Functions)
+- <code class="highlighter-rouge">map(element0, element1, ...)</code> 函数接收两个或以上参数，<code class="highlighter-rouge">element0</code>是函数，<code class="highlighter-rouge">map</code> 将传入的函数依次作用到序列的每个元素，并把结果作为新的list返回。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">36</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="nb">map</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>      <span class="c">#[1, 28, 9]</span>
+</code></pre>
+</div>
+
+<p>词典，使用键-值（Key-value）存储</p>
+
+<ul>
+  <li>键初始化后是不可变的，对应的值是可变的</li>
+  <li>键可以是复杂形式</li>
+  <li>不能以数字索引访问其中的元素，以键进行索引</li>
+</ul>
 
   </div>
 
