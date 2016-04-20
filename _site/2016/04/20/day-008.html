@@ -64,7 +64,7 @@
   <div class="post-content" itemprop="articleBody">
     <p><img src="/images/Day008.png" alt="" /></p>
 
-<p>异常 (Exceptions，Build-in Exception Details <a href="https://docs.python.org/2/library/exceptions.html">here</a>) ，指程序运行中出现不可预期的情况。</p>
+<p>异常 (Exceptions，Build-in Exception 更多内容可以在 <a href="https://docs.python.org/2/library/exceptions.html">这里</a>找到) ，指程序运行中出现不可预期的情况。</p>
 
 <p>什么时候会发生，例如</p>
 
@@ -99,13 +99,16 @@
 </code></pre>
 </div>
 
-<p>Python 中常见的异常，
-- <code class="highlighter-rouge">SyntaxError</code>，Python 不能解析程序中的语法
-- <code class="highlighter-rouge">NameError</code>，找不到该变量名
-- <code class="highlighter-rouge">AttributeError</code>，属性引用失败
-- <code class="highlighter-rouge">TypeError</code>，运算类型不对
-- <code class="highlighter-rouge">ValueError</code>，对错误的类型进行数据转换
-- <code class="highlighter-rouge">IOError</code>，系统故障(文件没有找到)</p>
+<p>Python 中常见的异常，</p>
+
+<ul>
+  <li><code class="highlighter-rouge">SyntaxError</code>，Python 不能解析程序中的语法</li>
+  <li><code class="highlighter-rouge">NameError</code>，找不到该变量名</li>
+  <li><code class="highlighter-rouge">AttributeError</code>，属性引用失败</li>
+  <li><code class="highlighter-rouge">TypeError</code>，运算类型不对</li>
+  <li><code class="highlighter-rouge">ValueError</code>，对错误的类型进行数据转换</li>
+  <li><code class="highlighter-rouge">IOError</code>，系统故障(文件没有找到)</li>
+</ul>
 
 <p>自定义一个异常处理，</p>
 
@@ -172,18 +175,21 @@
 <p>使用断言进行防御性编程 (Defensive programming），</p>
 
 <ul>
-  <li>断言可以很好的控制在未知条件下程序的响应，当产生不可预期的情况时，断言会阻断程序的运行。</li>
-  <li>通常用于检测程序的输入，同时也可以在任何地方使用。</li>
-  <li>能够更容易的定位出程序出错的地方。</li>
+  <li>断言可以很好的控制在未知条件下程序的响应，当产生不可预期的情况时，断言会阻断程序的运行</li>
+  <li>通常用于检测程序的输入，同时也可以在任何地方使用</li>
+  <li>能够更容易的定位出程序出错的地方</li>
 </ul>
 
 <p>使用断言可以有效的检测输入与输出的前提和后置条件，以避免错误的数值。</p>
 
-<p>使用 <code class="highlighter-rouge">assert</code>，
-- 检测参数的类型/数值
-- 检查数据结构中的不变量是否满足
-- 检查返回值是否满足约束条件
-- 检查程序</p>
+<p>使用 <code class="highlighter-rouge">assert</code>，</p>
+
+<ul>
+  <li>检测参数的类型/数值</li>
+  <li>检查数据结构中的不变量是否满足</li>
+  <li>检查返回值是否满足约束条件</li>
+  <li>检查程序</li>
+</ul>
 
   </div>
 

@@ -5,15 +5,15 @@
     <description></description>
     <link>http://challenge.frontseat.io/</link>
     <atom:link href="http://challenge.frontseat.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Apr 2016 21:22:14 +0800</pubDate>
-    <lastBuildDate>Wed, 20 Apr 2016 21:22:14 +0800</lastBuildDate>
+    <pubDate>Wed, 20 Apr 2016 21:47:59 +0800</pubDate>
+    <lastBuildDate>Wed, 20 Apr 2016 21:47:59 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>Day 008</title>
         <description>&lt;p&gt;&lt;img src=&quot;/images/Day008.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;异常 (Exceptions，Build-in Exception Details &lt;a href=&quot;https://docs.python.org/2/library/exceptions.html&quot;&gt;here&lt;/a&gt;) ，指程序运行中出现不可预期的情况。&lt;/p&gt;
+&lt;p&gt;异常 (Exceptions，Build-in Exception 更多内容可以在 &lt;a href=&quot;https://docs.python.org/2/library/exceptions.html&quot;&gt;这里&lt;/a&gt;找到) ，指程序运行中出现不可预期的情况。&lt;/p&gt;
 
 &lt;p&gt;什么时候会发生，例如&lt;/p&gt;
 
@@ -48,13 +48,16 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Python 中常见的异常，
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;SyntaxError&lt;/code&gt;，Python 不能解析程序中的语法
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;NameError&lt;/code&gt;，找不到该变量名
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;AttributeError&lt;/code&gt;，属性引用失败
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;TypeError&lt;/code&gt;，运算类型不对
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;ValueError&lt;/code&gt;，对错误的类型进行数据转换
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;IOError&lt;/code&gt;，系统故障(文件没有找到)&lt;/p&gt;
+&lt;p&gt;Python 中常见的异常，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SyntaxError&lt;/code&gt;，Python 不能解析程序中的语法&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NameError&lt;/code&gt;，找不到该变量名&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AttributeError&lt;/code&gt;，属性引用失败&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TypeError&lt;/code&gt;，运算类型不对&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ValueError&lt;/code&gt;，对错误的类型进行数据转换&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;IOError&lt;/code&gt;，系统故障(文件没有找到)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;自定义一个异常处理，&lt;/p&gt;
 
@@ -121,18 +124,21 @@
 &lt;p&gt;使用断言进行防御性编程 (Defensive programming），&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;断言可以很好的控制在未知条件下程序的响应，当产生不可预期的情况时，断言会阻断程序的运行。&lt;/li&gt;
-  &lt;li&gt;通常用于检测程序的输入，同时也可以在任何地方使用。&lt;/li&gt;
-  &lt;li&gt;能够更容易的定位出程序出错的地方。&lt;/li&gt;
+  &lt;li&gt;断言可以很好的控制在未知条件下程序的响应，当产生不可预期的情况时，断言会阻断程序的运行&lt;/li&gt;
+  &lt;li&gt;通常用于检测程序的输入，同时也可以在任何地方使用&lt;/li&gt;
+  &lt;li&gt;能够更容易的定位出程序出错的地方&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;使用断言可以有效的检测输入与输出的前提和后置条件，以避免错误的数值。&lt;/p&gt;
 
-&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;assert&lt;/code&gt;，
-- 检测参数的类型/数值
-- 检查数据结构中的不变量是否满足
-- 检查返回值是否满足约束条件
-- 检查程序&lt;/p&gt;
+&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;assert&lt;/code&gt;，&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;检测参数的类型/数值&lt;/li&gt;
+  &lt;li&gt;检查数据结构中的不变量是否满足&lt;/li&gt;
+  &lt;li&gt;检查返回值是否满足约束条件&lt;/li&gt;
+  &lt;li&gt;检查程序&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
         <link>http://challenge.frontseat.io/2016/04/20/day-008.html</link>
