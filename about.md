@@ -1,7 +1,10 @@
-计算机科学一年挑战
-==================
+---
+layout: page
+title: 关于
+permalink: /about/
+---
 
-![](./images/logo.png)
+![]({{site.url}}/images/logo.png)
 
 > FrontSeat 是一个口号，是一个挑战，是一种精神，将来也会是一个以技术为核心的社区。在这里，我们会学习计算机科学基础；在这里，我们会发现需求开发产品；在这里，科技与艺术将结合为一体；在这里，我们将从前所未有的角度出发，通过近似亲身感受的体验，和我们一同探索不一样的技术世界。
 
@@ -14,10 +17,6 @@
 我们相信在完成了这个挑战后，一定会收获很多。
 
 如果你可以完成英文的各类课程，也欢迎加入我们的挑战！我们会尽可能的帮助你解决你所遇到的问题。下面是我们挑战中包含的课程，整个挑战需要大约 2653 个小时完成。
-
-现在挑战正在进行的课程是 [Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-5#!)，课程的记录可以在[这里](./CS_01_6.00.1x/README.md)找到。
-
-以下为课程目录：
 
 ---
 
