@@ -1,5 +1,7 @@
 script: bash ./deploy.sh
 before_install:
+  - sudo apt-get update
+  - sudo apt-get install ruby
   - gem install jekyll
 env:
   global:
