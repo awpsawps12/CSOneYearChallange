@@ -1,0 +1,12 @@
+rvm:
+  - 2.20
+script: bash ./deploy.sh
+before_install:
+  - gem install jekyll
+env:
+  global:
+    - GH_REF: github.com/FrontSeat/CSOneYearChallange
+    - secure: euQUOjoPmxASiIgp4BcLdfJdgvy/yZIZtKq8qurYgrXgfDjngYOk0robA2ufkXhkV9o9lpaV2F08s87Mpx75+JtUr/xoDx0egpvB8f2PxxMKVvEOn6m5AsM4wEVcEQ3N0+LfFkhsDnDAemo8BrsC2PYO90hrwcHLsx7bCvF5N9WHcIxNK/9h/Vc+50R5Swhz730BD7DYKJXV8L4SI+qSFLlNdLP36BwW4oQPycgcEJ8hUGp23etAiNs01NRoas+Y4abPRkYaVA79MN+W3Tg+vv2at+0JfmdOVQVx6wThJW1iepzOnYJc73ZLg9x5eDqym5NqMgUjhAJZvTJpTjcpUZvLEBIgm+JaIJJh+PMQfS6zUQYXVzZLfcyzmZtU4htmDEtAdgTgpcVrIu927XuR6DDgtRTR9RefbMIbjPXDZj53aBylNlLYSpHm45Gx6dSnLUR8bg/m1u5PgSjumkdGymQrg7Nkx/YN5hzDRlo2kDHa/hA2umWgLV5Tc6uxMUPEOMjxp+eihVUvvoSSRerguuFL7R+34+ADzlxqaCSEgKZMelVK8kABPPCKWzOcI2cX+xUUPs/G34S6q8j637OQHqg/WHWhOEcc1flhV/iygzNWjWuinnXlkC1lgTJg/XZTn3Q6OLiVcjcVnSUu4JzQ3FNRIyIWjC0+nupyieQKEUc=
+notifications:
+  email:
+    - lixinyang1026@gmail.com
