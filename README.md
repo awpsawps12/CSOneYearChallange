@@ -1,7 +1,8 @@
-Computer Science One Year Challenge 计算机科学一年挑战
-==================
+# Computer Science One Year Challenge
+# 计算机科学一年挑战
 
-**The current challenge progress can be found at [HERE](http://challenge.frontseat.io/en.html)!**
+
+**The current challenge progress and learning note can be found at [HERE](http://challenge.frontseat.io/en.html)!**
 
 **现在挑战的进度和每天更新的内容可以在[这里](http://challenge.frontseat.io)找到！**
 
