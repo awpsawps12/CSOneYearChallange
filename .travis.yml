@@ -5,8 +5,9 @@ before_install:
   - sudo apt-get install imagemagick
   - sudo apt-get install graphicsmagick
   - gem install jekyll
-  - sudo npm install gulp -g
+  - npm install gulp-cli -g
   - npm install
+  - gulp
 env:
   global:
     - GH_REF: github.com/FrontSeat/CSOneYearChallange
