@@ -8,6 +8,10 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    img {
+      width: 150px;
+    }
 }
 
 .site-title {
@@ -17,11 +21,11 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-    color: #E45252;
+    color: $grey-color-light;
 
     &,
     &:visited {
-        color: #B84343;
+        color: $grey-color-dark;
     }
 }
 
