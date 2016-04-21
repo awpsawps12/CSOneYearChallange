@@ -10,7 +10,7 @@ lang: en
     {% assign posts=site.posts | where:"lang", page.lang %}
     {% for post in posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
 
         {% assign foundImage = 0 %}
         {% assign images = post.content | split:"<img " %}
@@ -29,6 +29,6 @@ lang: en
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
