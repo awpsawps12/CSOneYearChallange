@@ -2,6 +2,8 @@
 layout: page
 title: 关于
 permalink: /about/
+ref: about
+lang: zh
 ---
 
 ![]({{site.url}}/images/logo.png){: .lazyload}

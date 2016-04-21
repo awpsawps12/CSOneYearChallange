@@ -8,9 +8,17 @@
 # Site settings
 title: FrontSeat
 email: lixinyang1026@gmail.com
-description: >
+description:
+  en: Computer Science one year challenge!
+  zh: 计算机科学一年挑战！
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://challenge.frontseat.io" # the base hostname & protocol for your site
+url: "http://challenge.frontseat.io"
+index:
+  en: en.html
+  zh:
+github_link:
+  en: View on GitHub
+  zh: 本文 GitHub 地址
 github_username_0: li-xinyang
 github_username_1: awpsawps12
 # Build settings
