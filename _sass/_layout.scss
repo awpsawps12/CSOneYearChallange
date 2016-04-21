@@ -194,6 +194,9 @@
         min-width: 150px;
         padding: 0 5px 0 5px;
         @include media-query($on-laptop) {
+            max-width: 45%;
+        }
+        @include media-query($on-palm) {
             max-width: 100%;
         }
     }
