@@ -1,8 +1,13 @@
 rvm:
   - 2.20
-script: bash ./deploy.sh
+script: bash ./_deploy.sh
 before_install:
+  - sudo apt-get install imagemagick
+  - sudo apt-get install graphicsmagick
   - gem install jekyll
+  - npm install gulp-cli -g
+  - npm install
+  - gulp
 env:
   global:
     - GH_REF: github.com/FrontSeat/CSOneYearChallange
