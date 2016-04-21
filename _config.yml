@@ -21,6 +21,8 @@ github_link:
   zh: 本文 GitHub 地址
 github_username_0: li-xinyang
 github_username_1: awpsawps12
+feed:
+  en: /feed-en.xml
+  zh: /feed.xml
 # Build settings
 markdown: kramdown
-gems:
