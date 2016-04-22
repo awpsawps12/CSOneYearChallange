@@ -36,16 +36,28 @@
 </header>
 
 <div class="wrapper" style="text-align: right; line-height: 2em">
+
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% for post in posts %}
+  <a href="{{ post.url }}" class="{{ post.lang }}">
+    {% if post.lang == "zh" %}
+    <img src="/images/flag_china.png" alt="China Flag" />
+    {% else %}
+    <img src="/images/flag_usa.png" alt="USA Flag" />
+    {% endif %}
+    <span class="lang-trigger">{{ post.lang }}</span>
+  </a>
+  {% endfor %}
+
+
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
   {% for page in pages %}
     <a href="{{ page.url }}" class="{{ page.lang }}">
-
       {% if page.lang == "zh"%}
       <img src="/images/flag_china.png" alt="China Flag" />
       {% else %}
       <img src="/images/flag_usa.png" alt="USA Flag" />
       {% endif %}
-
       <span class="lang-trigger">{{ page.lang }}</span>
     </a>
   {% endfor %}
