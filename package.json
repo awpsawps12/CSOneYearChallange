@@ -18,6 +18,7 @@
   "homepage": "https://github.com/FrontSeat/CSOneYearChallange#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-if": "^2.0.0",
     "gulp-image-resize": "^0.8.0"
   }
 }

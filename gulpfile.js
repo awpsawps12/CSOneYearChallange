@@ -7,5 +7,5 @@ gulp.task('default', function() {
     width: 740,
     upscale: false
   }))
-  .pipe(gulp.dest('./images'))
+  .pipe(gulp.dest('./images'));
 });
