@@ -15,11 +15,11 @@ The curriculum includes Introduction to computer science, mathematics, program d
 
 Most of courses are from [Edx](https://www.edx.org/) and [Coursera](https://www.coursera.org/) and we will only complete free version which means we will not pay for the course content but textbook and supplemental materials such as software or hardware.
 
-The daily learning note will be recorded on a daily basis, and we believe we will gain a lot after complete this challenge
+The learning note will be recorded on a daily basis, and we believe we will gain a lot after complete this challenge.
 
 We welcome you to take part in this challenge! The whole challenge takes about 2653 hours to accomplish.
 
-Blow are all courses inside the curriculum.
+Blow is all courses inside the curriculum.
 
 ---
 
