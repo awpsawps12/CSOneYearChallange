@@ -13,7 +13,7 @@ We are passionate about technology. However, it is not easy for us when we want 
 
 The curriculum includes Introduction to computer science, mathematics, program design, algorithms, programming paradigm, testing, software architecture, theory, software engineering, computer architecture, operating system, computer network, database, cloud computing, encryption, compiler design, UX, computer graphics, machine learning, natural language process, big data, data mining and more.
 
-Most, of course, are from [Edx](https://www.edx.org/) and [Coursera](https://www.coursera.org/) and we will only complete free version which means we will not pay for the course content but textbook and supplemental materials such as software or hardware.
+Most of courses are from [Edx](https://www.edx.org/) and [Coursera](https://www.coursera.org/) and we will only complete free version which means we will not pay for the course content but textbook and supplemental materials such as software or hardware.
 
 The daily learning note will be recorded on a daily basis, and we believe we will gain a lot after complete this challenge
 
