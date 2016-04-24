@@ -1,0 +1,98 @@
+<div id="search-control" style="display:none;">
+
+  <style media="screen">
+  .algolia__result-highlight {
+    background-color: #fbdde0;
+  }
+  </style>
+
+  <header>
+    <div id="search-input"></div>
+  </header>
+  <main>
+    <div id="lang" class="facet"></div>
+    <div id="hits"></div>
+    <div id="pagination"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js" charset="utf-8"></script>
+
+  {% raw %}
+  <script type="text/template" id="hit-template">
+    <div class="hit">
+      <div class="hit-content">
+        <a href="{{url}}" >
+          <h3 class="hit-title">
+            {{{ _highlightResult.title.value }}} ({{lang}})
+          </h3>
+        </a>
+        {{{ _highlightResult.text.value }}}
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="no-results-template">
+    <div id="no-results-message">
+      <p>We didn't find any results for the search <em>"{{ query }}"</em>.</p>
+      <p>我们不能找到任何有关 <em>"{{ query }}"</em> 的结果。</p>
+    </div>
+  </script>
+  {% endraw %}
+
+
+  <script type="text/javascript">
+    var search = instantsearch({
+      appId: '0DLJVJKHB7',
+      apiKey: 'a5e5dff28b3d25008c4671e6db9b8db2',
+      indexName: 'CS_One_Year_Challenge',
+      urlSync: true
+    });
+
+    function getTemplate(templateName) {
+      var content = document.querySelector('#' + templateName + '-template').innerHTML;
+
+      return content;
+    }
+
+    function getHeader(title) {
+      return '<h5>' + title + '</h5>';
+    }
+
+    var widgets = [
+      instantsearch.widgets.searchBox({
+        container: '#search-input',
+        placeholder: '搜索 Search'
+      }),
+
+      instantsearch.widgets.hits({
+        container: '#hits',
+        hitsPerPage: 9,
+        templates: {
+          item: getTemplate('hit'),
+          empty: getTemplate('no-results')
+        }
+      }),
+
+      instantsearch.widgets.pagination({
+        container: '#pagination'
+      }),
+
+      instantsearch.widgets.menu({
+        container: '#lang',
+        attributeName: 'lang',
+        limit: 3,
+        templates: {
+          header: getHeader('语言 Language')
+        }
+      })
+    ];
+
+    widgets.forEach(search.addWidget, search);
+    search.start();
+
+    $('.search-tigger').on('click', function(){
+      $('#search-control').toggle()
+    });
+
+  </script>
+</div>
