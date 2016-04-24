@@ -26,7 +26,7 @@ You can find the curriculum at [HERE](https://github.com/open-source-society/com
 
 Special thanks goes to [Open Source Society](https://github.com/open-source-society).
 
-## Chinese
+## 中文
 
 > FrontSeat 是一个口号，是一个挑战，是一种精神，将来也会是一个以技术为核心的社区。在这里，我们会学习计算机科学基础；在这里，我们会发现需求开发产品；在这里，科技与艺术将结合为一体；在这里，我们将从前所未有的角度出发，通过近似亲身感受的体验，和我们一同探索不一样的技术世界。
 
