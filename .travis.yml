@@ -2,9 +2,10 @@ rvm:
   - 2.20
 script: bash ./_deploy.sh
 before_install:
+  - bundle install
   # - sudo apt-get install imagemagick
   # - sudo apt-get install graphicsmagick
-  - gem install jekyll
+  # - gem install jekyll
   # - npm install gulp-cli -g
   # - npm install
   # - gulp

@@ -26,9 +26,9 @@ feed:
   zh: /feed.xml
 # Build settings
 markdown: kramdown
-# Plugin
-# gems:
-#   - algoliasearch-jekyll
-# algolia:
-#   application_id: '0DLJVJKHB7'
-#   index_name:     'CS_One_Year_Challenge'
+Plugin
+gems:
+  - algoliasearch-jekyll
+algolia:
+  application_id: '0DLJVJKHB7'
+  index_name:     'CS_One_Year_Challenge'
