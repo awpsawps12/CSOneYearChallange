@@ -10,7 +10,17 @@
 
 ## English
 
-Translating in Progress...
+We are [Li Xinyang](https://github.com/li-xinyang) and [Xie Weichao](https://github.com/awpsawps12), two Front-end Developers who do not have a computer science degree.
+
+We are passionate about technology. However, it is not easy for us when we want to proceed further in our career because of lack of fundamental computer science knowledge. We finally decided to take a challenge, complete four years US Computer Science degree in one year.
+
+The curriculum includes Introduction to computer science, mathematics, program design, algorithms, programming paradigm, testing, software architecture, theory, software engineering, computer architecture, operating system, computer network, database, cloud computing, encryption, compiler design, UX, computer graphics, machine learning, natural language process, big data, data mining and more.
+
+Most of courses are from [Edx](https://www.edx.org/) and [Coursera](https://www.coursera.org/) and we will only complete free version which means we will not pay for the course content but textbook and supplemental materials such as software or hardware.
+
+The learning note will be recorded on a daily basis, and we believe we will gain a lot after complete this challenge.
+
+We welcome you to take part in this challenge! The whole challenge takes about 2653 hours to accomplish.
 
 You can find the curriculum at [HERE](https://github.com/open-source-society/computer-science#curriculum).
 
