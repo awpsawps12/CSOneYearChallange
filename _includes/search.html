@@ -77,6 +77,7 @@
         container: '#pagination'
       }),
 
+      // TODO: 需要使用代码或者在 Dashboard 每次 Index 更新后做设置
       instantsearch.widgets.menu({
         container: '#lang',
         attributeName: 'lang',
@@ -91,7 +92,7 @@
     search.start();
 
     $('.search-tigger').on('click', function(){
-      $('#search-control').toggle()
+      $('#search-control').toggle();
     });
 
   </script>
