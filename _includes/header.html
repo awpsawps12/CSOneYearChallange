@@ -4,7 +4,41 @@
 
     <a class="site-title" href="{{ site.baseurl }}/{{ site.index[page.lang] }}"><img src="/images/logo.png"></a>
 
-    <nav class="site-nav">
+    {% assign pages=site.pages | where:"lang", page.lang %}
+    {% for my_page in pages %}
+      {% if my_page.title %}
+      <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+    {% for post in posts %}
+    <a href="{{ post.url }}" class="{{ post.lang }}">
+      {% if post.lang == "zh" %}
+      <img src="/images/flag_china.png" alt="China Flag" />
+      {% else %}
+      <img src="/images/flag_usa.png" alt="USA Flag" />
+      {% endif %}
+      <span class="lang-trigger">{{ post.lang }}</span>
+    </a>
+    {% endfor %}
+
+
+    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+    {% for page in pages %}
+      <a href="{{ page.url }}" class="{{ page.lang }}">
+        {% if page.lang == "zh"%}
+        <img src="/images/flag_china.png" alt="China Flag" />
+        {% else %}
+        <img src="/images/flag_usa.png" alt="USA Flag" />
+        {% endif %}
+        <span class="lang-trigger">{{ page.lang }}</span>
+      </a>
+    {% endfor %}
+
+
+
+    <!-- <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
           <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
@@ -14,22 +48,17 @@
       </a>
 
       <div class="trigger">
-        {% assign pages=site.pages | where:"lang", page.lang %}
-        {% for my_page in pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
+
       </div>
 
-      <!-- <div class="trigger">
+      <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
-      </div> -->
-    </nav>
+      </div>
+    </nav> -->
 
   </div>
 
@@ -37,28 +66,5 @@
 
 <div class="wrapper" style="text-align: right; line-height: 2em">
 
-  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
-  {% for post in posts %}
-  <a href="{{ post.url }}" class="{{ post.lang }}">
-    {% if post.lang == "zh" %}
-    <img src="/images/flag_china.png" alt="China Flag" />
-    {% else %}
-    <img src="/images/flag_usa.png" alt="USA Flag" />
-    {% endif %}
-    <span class="lang-trigger">{{ post.lang }}</span>
-  </a>
-  {% endfor %}
 
-
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-  {% for page in pages %}
-    <a href="{{ page.url }}" class="{{ page.lang }}">
-      {% if page.lang == "zh"%}
-      <img src="/images/flag_china.png" alt="China Flag" />
-      {% else %}
-      <img src="/images/flag_usa.png" alt="USA Flag" />
-      {% endif %}
-      <span class="lang-trigger">{{ page.lang }}</span>
-    </a>
-  {% endfor %}
 </div>
