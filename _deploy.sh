@@ -6,6 +6,7 @@ mkdir public
 git config --global user.email "rebot@frontseat.com"
 git config --global user.name "Rebot"
 
+jekyll algolia push
 jekyll build
 
 cp -r ./_site/* ./public
